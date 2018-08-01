@@ -1,5 +1,10 @@
 package com.kenny.vertxDemo.config;
 
+/**
+ * 信息提示配置类
+ * @author Kenny
+ *
+ */
 public final class TipsConfig {
 	/** 不让类实例化 */
 	private TipsConfig() {

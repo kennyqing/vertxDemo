@@ -12,11 +12,13 @@ import com.byhealth.h5.core.SqlDao;
 import com.byhealth.h5.core.bean.db.RecordBean;
 import com.byhealth.h5.util.JsonUtil;
 import com.esotericsoftware.minlog.Log;
+import com.kenny.vertxDemo.api.model.user.po.QueryUserInfoByUserIdPoModel;
 import com.kenny.vertxDemo.api.model.user.vo.UserInfoVoModel;
 import com.kenny.vertxDemo.config.TableConfig;
 import com.kenny.vertxDemo.config.TipsConfig;
 
 import io.vertx.core.Handler;
+import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.RoutingContext;
 
@@ -93,6 +95,58 @@ public class UserDao extends SqlDao{
 				return;
 			}
 		});		
+	}
+
+	public void queryUserInfoByUserId(QueryUserInfoByUserIdPoModel queryUserInfoByUserIdPoModel) {
+		Log.info("UserDao queryUserInfoByUserId");
+		
+		StringBuilder sqlSB = new StringBuilder();
+		JsonArray params = new JsonArray();
+		
+		sqlSB.append("select *  ");
+		sqlSB.append("from t_user u ");
+		sqlSB.append("where u.user_id=? ");
+		
+		params.add(queryUserInfoByUserIdPoModel.getUserId());
+		
+		super.queryWithParams(sqlSB.toString(), params, resultSetRes -> {		
+			try {
+				
+				if(resultSetRes.getRows().size() == 0) {					
+					ApiReturnObject aro = new ApiReturnObject("没有查询到该userId对应的用户信息");	
+					super.success(aro);
+				}else {
+					List<UserInfoVoModel> userList = new ArrayList<>();
+					
+					for (JsonObject object : resultSetRes.getRows()) {
+						
+						try {
+							UserInfoVoModel userModel =  JsonUtil.getGsonForLowerCaseWithUnderscores().fromJson(object.toString(), UserInfoVoModel.class);
+							userList.add(userModel);
+						} catch (Exception e) {
+							super.fail(ErrorConfig.SQL_ERROR, TipsConfig.QUERY_USER_INFO_FAILED);
+							Log.error(e.getMessage(), e);
+							return;
+						}
+					}
+					
+					Map<String,Object> resMap = new HashMap<>();
+					resMap.put("userList", userList);
+					
+					ApiReturnObject aro = new ApiReturnObject("获取用户信息成功");
+					aro.setReturnObject(resMap);
+												
+					super.success(aro);
+				}
+				
+				
+				return;
+			} catch (Exception e) {
+				super.fail(ErrorConfig.SQL_ERROR, TipsConfig.QUERY_USER_INFO_FAILED);
+				Log.error(e.getMessage(), e);
+				return;
+			}
+		});
 	}
 
 }

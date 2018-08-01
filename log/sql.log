@@ -28,3 +28,9 @@ java.lang.NullPointerException: null
 2018-08-01 11:12:53.861 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-ea2a481b-6db9-4c6e-8066-b62c79aff3b1 sql=SELECT user_id,user_name,password,phone FROM t_user ORDER BY user_id
 2018-08-01 11:12:53.863 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-ea2a481b-6db9-4c6e-8066-b62c79aff3b1 params=[]
 2018-08-01 11:12:53.904 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-ea2a481b-6db9-4c6e-8066-b62c79aff3b1 耗时:321毫秒
+2018-08-01 12:08:15.166 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-96066e8f-9560-48bd-b4e4-b47120bf550c sql=select *  from t_user u where u.user_id=? 
+2018-08-01 12:08:15.186 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-96066e8f-9560-48bd-b4e4-b47120bf550c params=[1000]
+2018-08-01 12:08:15.237 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-96066e8f-9560-48bd-b4e4-b47120bf550c 耗时:361毫秒
+2018-08-01 12:09:50.096 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-8a059cac-d084-455f-821f-554e9c9ab721 sql=select *  from t_user u where u.user_id=? 
+2018-08-01 12:09:50.123 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-8a059cac-d084-455f-821f-554e9c9ab721 params=[1000]
+2018-08-01 12:09:50.151 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-8a059cac-d084-455f-821f-554e9c9ab721 耗时:347毫秒
