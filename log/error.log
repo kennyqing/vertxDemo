@@ -1,0 +1,35 @@
+2018-08-01 10:40:07.406 [vert.x-eventloop-thread-0] ERROR com.kenny.vertxDemo.verticle.DeployVerticle - DeployVerticle error
+2018-08-01 10:40:07.417 [vert.x-eventloop-thread-0] ERROR com.kenny.vertxDemo.verticle.DeployVerticle - com.ypzx.subprogstudent.verticle.AllVerticle
+java.lang.ClassNotFoundException: com.ypzx.subprogstudent.verticle.AllVerticle
+	at java.net.URLClassLoader.findClass(Unknown Source) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(Unknown Source) ~[na:1.8.0_161]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(Unknown Source) ~[na:1.8.0_161]
+	at io.vertx.core.impl.JavaVerticleFactory.createVerticle(JavaVerticleFactory.java:42) ~[vertx-core-3.3.2.jar:na]
+	at io.vertx.core.impl.DeploymentManager.createVerticles(DeploymentManager.java:184) ~[vertx-core-3.3.2.jar:na]
+	at io.vertx.core.impl.DeploymentManager.lambda$doDeployVerticle$2(DeploymentManager.java:157) ~[vertx-core-3.3.2.jar:na]
+	at io.vertx.core.impl.FutureImpl.checkCallHandler(FutureImpl.java:158) ~[vertx-core-3.3.2.jar:na]
+	at io.vertx.core.impl.FutureImpl.setHandler(FutureImpl.java:100) ~[vertx-core-3.3.2.jar:na]
+	at io.vertx.core.impl.DeploymentManager.doDeployVerticle(DeploymentManager.java:130) ~[vertx-core-3.3.2.jar:na]
+	at io.vertx.core.impl.DeploymentManager.doDeployVerticle(DeploymentManager.java:102) ~[vertx-core-3.3.2.jar:na]
+	at io.vertx.core.impl.DeploymentManager.deployVerticle(DeploymentManager.java:90) ~[vertx-core-3.3.2.jar:na]
+	at io.vertx.core.impl.VertxImpl.deployVerticle(VertxImpl.java:567) ~[vertx-core-3.3.2.jar:na]
+	at com.kenny.vertxDemo.verticle.DeployVerticle.<init>(DeployVerticle.java:35) ~[bin/:na]
+	at com.kenny.vertxDemo.start.IDEStart.main(IDEStart.java:19) ~[bin/:na]
+2018-08-01 11:04:44.328 [vert.x-eventloop-thread-0] ERROR com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-a16037f0-6f1d-41d4-ae05-aa1664af6fc5 , code:4, msg:java.sql.SQLException: Connections could not be acquired from the underlying database!
+2018-08-01 11:04:44.331 [vert.x-eventloop-thread-0] ERROR com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-a16037f0-6f1d-41d4-ae05-aa1664af6fc5 SQLDao rollback error
+2018-08-01 11:04:44.331 [vert.x-eventloop-thread-0] ERROR com.byhealth.h5.core.SqlDao - null
+java.lang.NullPointerException: null
+	at com.byhealth.h5.core.SqlDao.rollback(SqlDao.java:545) [byhealth-h5-3.6.jar:na]
+	at com.byhealth.h5.core.SqlDao.fail(SqlDao.java:450) [byhealth-h5-3.6.jar:na]
+	at com.byhealth.h5.core.SqlDao.lambda$0(SqlDao.java:73) [byhealth-h5-3.6.jar:na]
+	at io.vertx.core.impl.FutureImpl.checkCallHandler(FutureImpl.java:158) ~[vertx-core-3.3.2.jar:na]
+	at io.vertx.core.impl.FutureImpl.setHandler(FutureImpl.java:100) ~[vertx-core-3.3.2.jar:na]
+	at io.vertx.ext.jdbc.impl.JDBCClientImpl.lambda$null$0(JDBCClientImpl.java:137) ~[vertx-jdbc-client-3.3.2.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$3(ContextImpl.java:359) ~[vertx-core-3.3.2.jar:na]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:339) ~[netty-common-4.1.1.Final.jar:4.1.1.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:393) ~[netty-transport-4.1.1.Final.jar:4.1.1.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:742) ~[netty-common-4.1.1.Final.jar:4.1.1.Final]
+	at java.lang.Thread.run(Unknown Source) ~[na:1.8.0_161]
+2018-08-01 11:04:44.333 [vert.x-eventloop-thread-0] ERROR com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-a16037f0-6f1d-41d4-ae05-aa1664af6fc5 关闭数据库连接失败 conn == null !
+2018-08-01 11:10:59.740 [vert.x-eventloop-thread-4] ERROR com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-c6f87aa5-b611-4d9e-850f-a56da5302b16 , code:4, msg:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'userId' in 'field list'

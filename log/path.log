@@ -1,0 +1,16 @@
+2018-08-01 10:45:07.415 [vert.x-eventloop-thread-0] INFO  com.byhealth.h5.core.WebService - WebService client request path=/vertxDemoApi/queryUserInfo method=GET wRiUuid=wRiUuid-17e1e9dd-29be-40fc-a5ea-adf902615c3f
+2018-08-01 10:47:39.504 [vert.x-eventloop-thread-0] INFO  com.byhealth.h5.core.WebService - WebService client request path=/vertxDemoApi/queryUserInfo method=GET wRiUuid=wRiUuid-51af81cd-9efa-4b24-b1b4-6a8ae0363744
+2018-08-01 10:48:38.757 [vert.x-eventloop-thread-1] INFO  com.byhealth.h5.core.WebService - WebService client request path=/vertxDemoApi/queryUserInfo method=GET wRiUuid=wRiUuid-ec54bef2-9d4b-421c-80e8-121484d6196a
+2018-08-01 11:00:51.623 [vert.x-eventloop-thread-1] INFO  com.byhealth.h5.core.WebService - WebService client request path=/vertxDemoApi/queryUserInfo method=GET wRiUuid=wRiUuid-202204b3-518f-4ea4-9c62-fdbf6c5821f2
+2018-08-01 11:03:24.032 [vert.x-eventloop-thread-1] INFO  com.byhealth.h5.core.WebService - WebService client request path=/vertxDemoApi/queryUserInfo method=GET wRiUuid=wRiUuid-1516094e-03e4-41f1-9fb6-7cfeca424dc6
+2018-08-01 11:04:13.388 [vert.x-eventloop-thread-0] INFO  com.byhealth.h5.core.WebService - WebService client request path=/vertxDemoApi/queryUserInfo method=GET wRiUuid=wRiUuid-e894334d-aeee-4aec-929b-9ecd33fa8909
+2018-08-01 11:04:44.334 [vert.x-eventloop-thread-0] INFO  com.byhealth.h5.core.WebService - wRiUuid:wRiUuid-e894334d-aeee-4aec-929b-9ecd33fa8909 耗时:30945毫秒
+2018-08-01 11:06:11.514 [vert.x-eventloop-thread-0] INFO  com.byhealth.h5.core.WebService - WebService client request path=/vertxDemoApi/queryUserInfo method=GET wRiUuid=wRiUuid-e857fb85-2ce7-469e-a937-8a5d5ff73d87
+2018-08-01 11:09:57.132 [vert.x-eventloop-thread-0] INFO  com.byhealth.h5.core.WebService - WebService client request path=/vertxDemoApi/queryUserInfo method=GET wRiUuid=wRiUuid-07088bdb-d247-4045-b2a0-4dfd2caca467
+2018-08-01 11:09:58.026 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.WebService - wRiUuid:wRiUuid-07088bdb-d247-4045-b2a0-4dfd2caca467 耗时:894毫秒
+2018-08-01 11:10:59.673 [vert.x-eventloop-thread-0] INFO  com.byhealth.h5.core.WebService - WebService client request path=/vertxDemoApi/queryUserInfo method=GET wRiUuid=wRiUuid-feee419d-e85a-41af-9b2a-cce612873beb
+2018-08-01 11:10:59.753 [vert.x-eventloop-thread-4] INFO  com.byhealth.h5.core.WebService - wRiUuid:wRiUuid-feee419d-e85a-41af-9b2a-cce612873beb 耗时:80毫秒
+2018-08-01 11:11:42.926 [vert.x-eventloop-thread-0] INFO  com.byhealth.h5.core.WebService - WebService client request path=/vertxDemoApi/queryUserInfo method=GET wRiUuid=wRiUuid-bfcc640d-bd5d-4690-b3a6-bd39157662f6
+2018-08-01 11:11:43.421 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.WebService - wRiUuid:wRiUuid-bfcc640d-bd5d-4690-b3a6-bd39157662f6 耗时:496毫秒
+2018-08-01 11:12:53.454 [vert.x-eventloop-thread-0] INFO  com.byhealth.h5.core.WebService - WebService client request path=/vertxDemoApi/queryUserInfo method=GET wRiUuid=wRiUuid-940ce279-26d0-40e0-99dd-2622c0774b48
+2018-08-01 11:12:53.905 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.WebService - wRiUuid:wRiUuid-940ce279-26d0-40e0-99dd-2622c0774b48 耗时:451毫秒

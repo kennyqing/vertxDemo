@@ -1,0 +1,30 @@
+2018-08-01 11:04:44.328 [vert.x-eventloop-thread-0] ERROR com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-a16037f0-6f1d-41d4-ae05-aa1664af6fc5 , code:4, msg:java.sql.SQLException: Connections could not be acquired from the underlying database!
+2018-08-01 11:04:44.330 [vert.x-eventloop-thread-0] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-a16037f0-6f1d-41d4-ae05-aa1664af6fc5 耗时:30809毫秒
+2018-08-01 11:04:44.331 [vert.x-eventloop-thread-0] ERROR com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-a16037f0-6f1d-41d4-ae05-aa1664af6fc5 SQLDao rollback error
+2018-08-01 11:04:44.331 [vert.x-eventloop-thread-0] ERROR com.byhealth.h5.core.SqlDao - null
+java.lang.NullPointerException: null
+	at com.byhealth.h5.core.SqlDao.rollback(SqlDao.java:545) [byhealth-h5-3.6.jar:na]
+	at com.byhealth.h5.core.SqlDao.fail(SqlDao.java:450) [byhealth-h5-3.6.jar:na]
+	at com.byhealth.h5.core.SqlDao.lambda$0(SqlDao.java:73) [byhealth-h5-3.6.jar:na]
+	at io.vertx.core.impl.FutureImpl.checkCallHandler(FutureImpl.java:158) ~[vertx-core-3.3.2.jar:na]
+	at io.vertx.core.impl.FutureImpl.setHandler(FutureImpl.java:100) ~[vertx-core-3.3.2.jar:na]
+	at io.vertx.ext.jdbc.impl.JDBCClientImpl.lambda$null$0(JDBCClientImpl.java:137) ~[vertx-jdbc-client-3.3.2.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$3(ContextImpl.java:359) ~[vertx-core-3.3.2.jar:na]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:339) ~[netty-common-4.1.1.Final.jar:4.1.1.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:393) ~[netty-transport-4.1.1.Final.jar:4.1.1.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:742) ~[netty-common-4.1.1.Final.jar:4.1.1.Final]
+	at java.lang.Thread.run(Unknown Source) ~[na:1.8.0_161]
+2018-08-01 11:04:44.333 [vert.x-eventloop-thread-0] ERROR com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-a16037f0-6f1d-41d4-ae05-aa1664af6fc5 关闭数据库连接失败 conn == null !
+2018-08-01 11:09:57.793 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-68284fcc-45b9-4d34-93af-1b5c6ace9140 sql=SELECT userId,userName,password,phone FROM t_user ORDER BY userId
+2018-08-01 11:09:57.805 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-68284fcc-45b9-4d34-93af-1b5c6ace9140 params=[]
+2018-08-01 11:09:58.025 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-68284fcc-45b9-4d34-93af-1b5c6ace9140 耗时:639毫秒
+2018-08-01 11:10:59.702 [vert.x-eventloop-thread-4] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-c6f87aa5-b611-4d9e-850f-a56da5302b16 sql=SELECT userId,userName,password,phone FROM t_user ORDER BY userId
+2018-08-01 11:10:59.702 [vert.x-eventloop-thread-4] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-c6f87aa5-b611-4d9e-850f-a56da5302b16 params=[]
+2018-08-01 11:10:59.740 [vert.x-eventloop-thread-4] ERROR com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-c6f87aa5-b611-4d9e-850f-a56da5302b16 , code:4, msg:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'userId' in 'field list'
+2018-08-01 11:10:59.753 [vert.x-eventloop-thread-4] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-c6f87aa5-b611-4d9e-850f-a56da5302b16 耗时:79毫秒
+2018-08-01 11:11:43.374 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-8fd21e08-c6c5-4a41-97fb-d1a885264182 sql=SELECT user_id,user_name,password,phone FROM t_user ORDER BY user_id
+2018-08-01 11:11:43.376 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-8fd21e08-c6c5-4a41-97fb-d1a885264182 params=[]
+2018-08-01 11:11:43.420 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-8fd21e08-c6c5-4a41-97fb-d1a885264182 耗时:359毫秒
+2018-08-01 11:12:53.861 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-ea2a481b-6db9-4c6e-8066-b62c79aff3b1 sql=SELECT user_id,user_name,password,phone FROM t_user ORDER BY user_id
+2018-08-01 11:12:53.863 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-ea2a481b-6db9-4c6e-8066-b62c79aff3b1 params=[]
+2018-08-01 11:12:53.904 [vert.x-eventloop-thread-3] INFO  com.byhealth.h5.core.SqlDao - dRiUuid:dRiUuid-ea2a481b-6db9-4c6e-8066-b62c79aff3b1 耗时:321毫秒

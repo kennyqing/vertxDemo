@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+	<appender name="vertxDemoStdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{128} - %msg%n</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="vertxDemoInfo" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>log/log.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>log/log/log.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>365</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{128} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="h5Path" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>log/path.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>log/path/path.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>365</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{128} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="h5SQL" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>log/sql.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>log/sql/sql.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>365</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{128} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="vertxDemoError" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>log/error.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>log/error/error.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>365</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{128} - %msg%n</pattern>
+		</encoder>
+		
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<logger name="com.byhealth.h5.core.WebService" level="INFO">
+		<appender-ref ref="h5Path" />
+	</logger>
+	
+	<logger name="com.byhealth.h5.core.SqlDao" level="INFO">
+		<appender-ref ref="h5SQL" />
+	</logger>
+	
+	<root level="INFO">
+		<appender-ref ref="vertxDemoStdout" />
+		<appender-ref ref="vertxDemoInfo" />
+		<appender-ref ref="vertxDemoError" />
+	</root>
+
+</configuration>
