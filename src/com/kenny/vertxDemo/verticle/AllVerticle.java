@@ -5,6 +5,7 @@ import com.byhealth.h5.core.WebService;
 import com.byhealth.h5.util.Log;
 import com.kenny.vertxDemo.api.service.prac.QueryUserInfoByUserIdService;
 import com.kenny.vertxDemo.api.service.prac.QueryUserInfoService;
+import com.kenny.vertxDemo.api.service.project.UploadProjectService;
 
 import io.vertx.core.AbstractVerticle;
 
@@ -30,8 +31,12 @@ public class AllVerticle extends AbstractVerticle{
 	private void startService(){
 		WebService webService = new WebService(vertx);
 		
+		//用户模块
 		new QueryUserInfoService(webService);
 		new QueryUserInfoByUserIdService(webService);
+		
+		//项目模块
+		new UploadProjectService(webService);
 		
 		if(GlobalConfig.IS_ENABLE_STATIC_RESOURCE){
 			webService.enableStaticResourceAndHtml();

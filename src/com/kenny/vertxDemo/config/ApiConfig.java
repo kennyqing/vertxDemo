@@ -14,6 +14,10 @@ public final class ApiConfig {
 	/** 查询用户信息接口 */
 	public static final String 	QUERY_USER_INFO_PATH = API_PREFIX + "/queryUserInfo";
 	
+	//项目模块
+	/** 上传项目接口 */
+	public static final String 	UPLOAD_PROJECT_PATH = API_PREFIX + "/public/project/uploadProject";
+	
 	/** 根据userId查询用户信息接口 */
 	public static final String 	QUERY_USER_INFO_USERID_PATH = API_PREFIX + "/queryUserInfoByUserId";
 }
